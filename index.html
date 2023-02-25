@@ -11,6 +11,27 @@
     button{background-color: #fdfd96}
     button:first-child{width: 30%;height: 40px}
 
+
+body {
+ background-color: rgba(0, 255, 255, 0.12);
+ cursor: pointer;
+ }
+ #mouseImg {
+ width: 100px;
+ height: 100px;
+ position: absolute;
+ }
+ #mouseImg img {
+ width: 100%;
+ opacity: 0;
+ transition: all .0s ease ;
+ }
+ #mouseImg img:nth-of-type(2){
+ transition-delay: .0s;
+ }
+ #mouseImg img:nth-of-type(3){
+ transition-delay: .0s;
+ }
 </style>
 
 
@@ -19,9 +40,8 @@
     <h1 align="center">欢迎来到冷酷的猫猫1320的网站</h1>
     <div style="text-align:center">
         <!--<h2 style="color: red">网站正在维护中请稍后再试</h2>-->
-
         <img src="img/1320.jpg" width="100px" height="100px"/>
-    </div>
+        </div>
     <h2 align="center">这是冷酷的猫猫1320</h2>
 <div style="text-align:center;">
 
@@ -47,6 +67,12 @@
         <button style="font-size:120%;margin-right:0px">前往AT的GitHub</button>
     </a>
 </div>
+ <div style="text-align:center">
+     <p id = "GFG_DOWN" style =
+        "color:green; font-size: 20px; font-weight: bold;">
+</p>
+
+ </div>
 
 <div style="text-align:center">
     <a href="https://lengkudemaomao1320.github.io/CN_1320/about/about.html">
@@ -57,6 +83,43 @@
   </a>
 
 </div>
+
+
+
+
+
+
+
+
+
+<div>
+<script>
+    let div = document.createElement("div");
+ div.id = "mouseImg";
+ for (let i =0 ; i <1 ;i++){
+ let img = document.createElement("img");
+ img.src = "img/HE.gif";
+ div.appendChild(img);
+ }
+ document.body.appendChild(div);
+ let divImg = document.querySelector("#mouseImg");
+ document.addEventListener("mousedown",function (e) {
+ let x = e.pageX;
+ let y = e.pageY;
+ divImg.style.left = x + "px" ;
+ divImg.style.top = y + "px";
+ let imgs = divImg.children;
+ for (let i =0 ; i < imgs.length ;i++) {
+ imgs[i].style.opacity = "1";
+ setTimeout(function () {
+ imgs[i].style.opacity = "0";
+ },1180);
+ }
+ });
+</script>
+
+</div>
+
 
 </body>
 </html>

@@ -6,6 +6,31 @@
     <link rel="icon" href="icon/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 </head>
+
+<style>
+    body {
+ background-color: rgba(0, 255, 255, 0.12);
+ cursor: pointer;
+ }
+ #mouseImg {
+ width: 100px;
+ height: 100px;
+ position: absolute;
+ }
+ #mouseImg img {
+ width: 100%;
+ opacity: 0;
+ transition: all .0s ease ;
+ }
+ #mouseImg img:nth-of-type(2){
+ transition-delay: .0s;
+ }
+ #mouseImg img:nth-of-type(3){
+ transition-delay: .0s;
+ }
+
+</style>
+
 <body style="background-color: #87CEFA">
 
 <div style="text-align:center">
@@ -28,6 +53,35 @@
 <h4>喵!</h4>
 
 <img src="img/冷酷的猫猫.png" width="400px" height="70px">
+</div>
+
+
+<div>
+<script>
+    let div = document.createElement("div");
+ div.id = "mouseImg";
+ for (let i =0 ; i <1 ;i++){
+ let img = document.createElement("img");
+ img.src = "img/HE.gif";
+ div.appendChild(img);
+ }
+ document.body.appendChild(div);
+ let divImg = document.querySelector("#mouseImg");
+ document.addEventListener("mousedown",function (e) {
+ let x = e.pageX;
+ let y = e.pageY;
+ divImg.style.left = x + "px" ;
+ divImg.style.top = y + "px";
+ let imgs = divImg.children;
+ for (let i =0 ; i < imgs.length ;i++) {
+ imgs[i].style.opacity = "1";
+ setTimeout(function () {
+ imgs[i].style.opacity = "0";
+ },1180);
+ }
+ });
+</script>
+
 </div>
 
 </body>
