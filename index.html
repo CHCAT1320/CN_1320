@@ -32,6 +32,10 @@ body {
  #mouseImg img:nth-of-type(3){
  transition-delay: .0s;
  }
+
+
+ div{text-align:center}
+
 </style>
 
 
@@ -46,6 +50,21 @@ body {
         <img src="img/1320.jpg" width="100px" height="100px"/>
         </div>
     <h2 align="center">这是冷酷的猫猫1320</h2>
+    <div id="box"></div>
+<script type="text/javascript">
+            function setStorage(){
+                if(localStorage.counter){
+                    localStorage.counter=Number(localStorage.counter)+1;
+                }else{
+                    localStorage.counter=1;
+                }
+                return localStorage.counter;
+            }
+            var counter=setStorage();
+            var oBox=document.getElementById('box');
+            oBox.innerHTML="该网页被访问的次数为"+counter+"次";
+        </script>
+
 <div style="text-align:center;;">
 
     <a href="https://space.bilibili.com/1644970825?spm_id_from=333.1007.0.0">
@@ -117,8 +136,6 @@ body {
 </script>
 
 </div>
-
-
 
 
 
