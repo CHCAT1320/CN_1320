@@ -12,26 +12,6 @@
     button:first-child{width: 30%;height: 40px}
 
 
-    body {
- background-color: rgba(0, 255, 255, 0.12);
- cursor: pointer;
- }
- #mouseImg {
- width: 100px;
- height: 100px;
- position: absolute;
- }
- #mouseImg img {
- width: 100%;
- opacity: 0;
- transition: all .0s ease ;
- }
- #mouseImg img:nth-of-type(2){
- transition-delay: .0s;
- }
- #mouseImg img:nth-of-type(3){
- transition-delay: .0s;
- }
 div{text-align:center}
 </style>
 
@@ -56,7 +36,7 @@ div{text-align:center}
             }
             var counter=setStorage();
             var oBox=document.getElementById('box');
-            oBox.innerHTML="网页刷新次数为"+counter+"次";
+            oBox.innerHTML="你已经访问了此网站"+counter+"次";
         </script>
 <div style="text-align:center;">
 
@@ -91,30 +71,7 @@ div{text-align:center}
 </div>
 
 <div>
-<script>
-    let div = document.createElement("div");
- div.id = "mouseImg";
- for (let i =0 ; i <1 ;i++){
- let img = document.createElement("img");
- img.src = "img/HE.gif";
- div.appendChild(img);
- }
- document.body.appendChild(div);
- let divImg = document.querySelector("#mouseImg");
- document.addEventListener("mousedown",function (e) {
- let x = e.pageX;
- let y = e.pageY;
- divImg.style.left = x + 10+ "px" ;
- divImg.style.top = y - 30+ "px";
- let imgs = divImg.children;
- for (let i =0 ; i < imgs.length ;i++) {
- imgs[i].style.opacity = "1";
- setTimeout(function () {
- imgs[i].style.opacity = "0";
- },1180);
- }
- });
-</script>
+
 
 </div>
 
