@@ -2,32 +2,13 @@
 <html lang="cn">
 <head>
     <meta charset="UTF-8">
-    <title>关于</title>
+    <title>The 冷酷的猫猫1320's home is about</title>
     <link rel="icon" href="icon/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 </head>
 
 <style>
-    body {
- background-color: rgba(0, 255, 255, 0.12);
- cursor: pointer;
- }
- #mouseImg {
- width: 100px;
- height: 100px;
- position: absolute;
- }
- #mouseImg img {
- width: 100%;
- opacity: 0;
- transition: all .0s ease ;
- }
- #mouseImg img:nth-of-type(2){
- transition-delay: .0s;
- }
- #mouseImg img:nth-of-type(3){
- transition-delay: .0s;
- }
+
 
 </style>
 
@@ -46,8 +27,9 @@
 <h3>网站的部分代码由 @冷酷的猫猫1320 独立编写</h3>
 <h3>特别感谢 @一袋白凉粉 对猫猫的技术帮助与支持</h3>
 <h3>如果发现BUG或有什么想写进网站的东西，请向QQ:1095216448提交</h3>
-<h3 style="color: red">最后一次更新：20230226 10：23  （2023年2月26日10：23）</h3>
-<h3 style="color: blue">版本号：v1.7.6</h3>
+<h3 style="color: red">最后一次更新：2023年3月11日</h3>
+<h3 style="color: blue">版本号：v2.0.0</h3>
+    <h3>共修复了3个问题</h3>
 <img src="img/1320.jpg" width="50px" height="50px">
 
 <h3>UP永远在这里</h3>
@@ -58,30 +40,7 @@
 
 
 <div>
-<script>
-    let div = document.createElement("div");
- div.id = "mouseImg";
- for (let i =0 ; i <1 ;i++){
- let img = document.createElement("img");
- img.src = "img/HE.gif";
- div.appendChild(img);
- }
- document.body.appendChild(div);
- let divImg = document.querySelector("#mouseImg");
- document.addEventListener("mousedown",function (e) {
- let x = e.pageX;
- let y = e.pageY;
- divImg.style.left = x + 10+ "px" ;
- divImg.style.top = y - 30+ "px";
- let imgs = divImg.children;
- for (let i =0 ; i < imgs.length ;i++) {
- imgs[i].style.opacity = "1";
- setTimeout(function () {
- imgs[i].style.opacity = "0";
- },1180);
- }
- });
-</script>
+
 
 </div>
 
