@@ -17,27 +17,6 @@
     box1{background-color: #ffffff}
 
 
-body {
- background-color: rgba(0, 255, 255, 0.12);
- cursor: pointer;
-
- }
- #mouseImg {
- width: 100px;
- height: 100px;
- position: absolute;
- }
- #mouseImg img {
- width: 100%;
- opacity: 0;
- transition: all .0s ease ;
- }
- #mouseImg img:nth-of-type(2){
- transition-delay: .0s;
- }
- #mouseImg img:nth-of-type(3){
- transition-delay: .0s;
- }
 
  div{text-align:center}
  @font-face {
@@ -75,6 +54,7 @@ src: url("fonts/cmdysj.ttf") format("truetype");
         <!--<h2 style="color: red">网站正在维护中请稍后再试</h2>-->
         <img src="img/1320.jpg" width="100px" height="100px"/>
         </div>
+		
     <h2 align="center">这是冷酷的猫猫1320</h2>
     <!--<script defer src="https://pyscript.net/latest/pyscript.js"></script>
     <div class="clock">
@@ -84,35 +64,25 @@ src: url("fonts/cmdysj.ttf") format("truetype");
         import datetime as dt
         pyscript.write('date1',dt.date.today().strftime('%Y年%m月%d日'))
     </py-script>-->
+	
     <h3 id="box5" align="center"></h3>
-<script type="text/javascript">
-            function setStorage(){
-                if(localStorage.counter){
-                    localStorage.counter=Number(localStorage.counter)+1;
-                }else{
-                    localStorage.counter=1;
-                }
-                return localStorage.counter;
-            }
-            var counter=setStorage();
-            var oBox=document.getElementById('box5');
-            oBox.innerHTML="你已经访问了此网站"+counter+"次";
-        </script>
+	
+<!--访问次数(已移动)-->
+<script type="text/javascript" src="js/fangwen.js"></script>
 
+<!--按钮区-->
 <div style="text-align:center;;">
 
     <a href="https://space.bilibili.com/1644970825?spm_id_from=333.1007.0.0">
 
-    <button style="; color: red; margin-right:100px; font-size:120%">前往AT的bilibili(哔哩哔哩)</button>
+    <button style="margin-right:100px; font-size:120%">前往AT的bilibili(哔哩哔哩)</button>
 
 </a>
     <a href="https://lengkumao.lanzoul.com/b041ksl4j">
-<button style="margin-right:0px; color: blue;font-size:120%">AT的Phigros谱面(密码：lkmm)</button>
+<button style="margin-right:0px;font-size:120%">AT的Phigros谱面(密码：lkmm)</button>
 </a>
 
 </div>
-
-
 
 <div style="text-align:center">
     <a href="https://lengkumao.lanzoul.com/b041lbhkf">
@@ -122,7 +92,6 @@ src: url("fonts/cmdysj.ttf") format("truetype");
     <a href="https://github.com/lengkudemaomao1320">
         <button style="font-size:120%;margin-right:0px">前往AT的GitHub</button>
     </a>
-
 
 </div>
     <div style="text-align:center">
@@ -134,7 +103,7 @@ src: url("fonts/cmdysj.ttf") format("truetype");
 
 
 
-
+<!--愚人节的东西，懒删-->
     <!--<div id="box1">
         <a href="https://lengkudemaomao1320.github.io/CN_1320/index.Error.html">
         <h2>
@@ -145,55 +114,34 @@ src: url("fonts/cmdysj.ttf") format("truetype");
 </a>
     </div>-->
 
+
+<!--关于链接-->
 <div style="text-align:center">
     <a href="https://lengkudemaomao1320.github.io/CN_1320/about/about.html">
     <h3 style="color: red">关于</h3>
     </a>
+<!--手机版链接-->
   <a href="https://lengkudemaomao1320.github.io/CN_1320/phone/index.html">
       <button style="first-child:width: 3%;height: 25px;">前往手机版</button>
   </a>
-
+  
+<!--没啥用-->
 </div>
-
-<!-- html点击特效（百度的） -->
-<div style="margin-right:50px">
 <script>
-    let div = document.createElement("div");
- div.id = "mouseImg";
- for (let i =0 ; i <1 ;i++){
- let img = document.createElement("img");
- img.src = "img/HE.gif";
- div.appendChild(img);
- }
- document.body.appendChild(div);
- let divImg = document.querySelector("#mouseImg");
- document.addEventListener("mousedown",function (e) {
- let x = e.pageX;
- let y = e.pageY;
- divImg.style.left = x + 10+ "px" ;
- divImg.style.top = y - 30+ "px";
- let imgs = divImg.children;
- for (let i =0 ; i < imgs.length ;i++) {
- imgs[i].style.opacity = "1";
- setTimeout(function () {
- imgs[i].style.opacity = "0";
- },1180);
- }
- });
- console.log("HE click")
- console.log("rks+999+")
+	console.log("HE click")
+	console.log("rks+999+")
 </script>
+
 </div>
 
-
+<!--b站、github图标-->
 <div style="margin-right:-50px">
 	<img src="img/冷酷的猫猫.png" width="400px" height="70px">
 </div>
 
 
-
-<div id="watermarkId" class="watermark_mask" style="z-index:-1"></div>
-   
+<!--水印-->
+<div id="watermarkId" class="watermark_mask" style="z-index:-1"></div> 
 <script src="js/shuiyin.js" type="text/javascript" charset="utf-8"></script>
 
 
