@@ -8,8 +8,8 @@
                 watermark_txt: "text",
                 watermark_x: 10,//水印起始位置x轴坐标
                 watermark_y: 20,//水印起始位置Y轴坐标
-                watermark_rows: 100,//水印行数
-                watermark_cols: 100,//水印列数
+                watermark_rows: 1000,//水印行数
+                watermark_cols: 1000,//水印列数
                 watermark_x_space: 50,//水印x轴间隔
                 watermark_y_space: 50,//水印y轴间隔
                 watermark_color: '#000000',//水印字体颜色
@@ -72,7 +72,7 @@
                     mask_div.style.left = x + 'px';
                     mask_div.style.top = y + 'px';
                     mask_div.style.overflow = "hidden";
-                    mask_div.style.zIndex = "9999";
+                    mask_div.style.zIndex = "-9999";
                     mask_div.style.pointerEvents = "none";
                     //mask_div.style.border="solid #eee 1px";
                     mask_div.style.opacity = defaultSettings.watermark_alpha;
