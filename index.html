@@ -9,6 +9,26 @@
 		<meta name='冷酷的猫猫1320 website' content="冷酷的猫猫1320 website"
 	</head>
 	<style>
+		#popup {
+					position: fixed;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					border: 1px solid black;
+					padding: 20px;
+					background-color: white;
+					z-index: 9999;
+				}
+		
+				#overlay {
+					position: fixed;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					background-color: rgba(0,0,0,0.5);
+					z-index: 9998;
+				}
 		@font-face {
 		
 		font-family: "cmdysj";
@@ -37,6 +57,7 @@
 			    ZXCVBNM
 			</p>
 			<div>
+				</div>
 				<div id="colorbox" style="height: 70px;margin: 0;">
 					<div style="text-align: center">
 						<button style="width:80px;height: 60px;margin-top: 5px; font-size:120%">主页</button>
@@ -65,7 +86,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
 			<div style="text-align:center">
 				 <h1 style=" font-size:300%">Welcome to the 冷酷的猫猫1320 website</h1>
 				 <img src="img/1320.jpg" width="120px" height="120px"/>
@@ -92,5 +112,26 @@
 		<div>
 			<script type="text/javascript" src="js/xy suofang.js"></script>
 		</div>
+			<div id="overlay"></div>
+				<div id="popup" style="text-align: center;">
+					<p style="margin-top: -20px;">公告</p>
+					<p>测试公告，网站制作：冷酷的猫猫1320</p>
+					<button style="color: red;background-color: #87CEFA;" onclick="closePopup()">我知道了</button>
+				</div>
+				<script>
+					function closePopup() {
+						document.getElementById("popup").style.display = "none";
+						document.getElementById("overlay").style.display = "none";
+					}
+				</script>
+				<script>
+					// 以下为自动弹出公告的代码，可根据需要修改
+					window.onload = function() {
+						setTimeout(function() {
+							document.getElementById("popup").style.display = "block";
+							document.getElementById("overlay").style.display = "block";
+						}, 5000); // 5000 毫秒后弹出公告
+					}
+				</script>
 	</body>
 </html>
