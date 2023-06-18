@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登录&注册</title>
+	</head>
+	<!--https://lengkudemaomao1320.github.io/CN_1320/-->
+	<body style="background-color: #87CEFA;margin: 0;">
+		<div style="text-align: center;">
+		<form name="form" action="index.html" method="get"
+		target="_blank">
+		            <table>
+		                <tr>        
+		                    <td>用户名：</td>
+		                    <td>
+		                        <!--<input type="text" name="userid" value="" placeholder="登录名"/>-->
+		                        <input type="text" name="user" value=""/>
+		                    </td>
+		                </tr>
+						<td>密码：</td>
+						<td>
+						    <input type="password" name="pw" value="" />
+						</td>
+						<tr>
+						                    <td colspan="2">
+						                        <input type="submit" value="注册" name="submit" onclick="check()"/>
+						                        <input type="reset" value="重置" />
+						                    </td>
+						               </tr>
+		            <script>
+		            	function check(){
+		            	    if( form.user.value==""){
+		            	        alert("请输入用户名！"); form.user.focus(); return;
+		            		}else if(form.pw.value==""){
+		            	        alert("请输入密码！"); form.pw.focus();return;
+						    }
+							if(form.user.value=="冷酷的猫猫1320"){
+								if(form.pw.value=="gzr123456"){
+									alert("欢迎超级管理员"); form.user.focus(); return;form.pw.focus();return;
+								}
+		            		}
+							else{
+							    document.form.submit();
+							}
+							}
+		            </script>
+					</table>
+		        </form>
+			</div>		
+	</body>
+</html>
