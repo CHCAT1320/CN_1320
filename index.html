@@ -79,7 +79,10 @@
 						<a href="https://lengkudemaomao1320.github.io/CN_1320/index.Error.html">	
 							<button style="width:170px;height: 60px; font-size:120%">未开发(预计7.5)</button>
 						</a>
-						<div style="margin-right: -1300px;font-size:120% ;margin-top: -70px;">
+						<a href="hello.html">
+							<button style="height: 60px; font-size:120%;">登录</button>
+						</a>
+						<div style="margin-right: -1400px;font-size:120% ;margin-top: -70px;">
 							<h3 id="user1"></h3>
 						</div>
 						<div>
@@ -94,9 +97,6 @@
 				 <img src="img/1320.webp" width="120px" height="120px"/>
 				 <h2 style=" font-size:200%">这是冷酷的猫猫1320</h2>
 				 <h2 id="box5" align="center"></h2>
-				 <a href="hello.html">
-					 <button>登录</button>
-				 </a>
 				 <script type="text/javascript" src="js/fangwen.js"></script>
 				 <img src="img/冷酷的猫猫.png" width="450px" height="90px" style="margin-right:-50px">
 				 <a href="https://lengkudemaomao1320.github.io/CN_1320/about/about.html" style="text-decoration: none;">
@@ -107,14 +107,14 @@
 					{
 					     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
 					     var r = window.location.search.substr(1).match(reg);
-					      if(r!=null)return  unescape(r[2]); return null;
+					      if(r!=null)return  unescape(r[2]); return "未登录";
 					}
 					 //alert(GetQueryString("user"));
 					 var user = decodeURI(GetQueryString("user")); // 获取URL参数中的"user"值，并进行解码
 					 if (user) {
 					   var h3 = document.getElementById("user1"); // 获取具有"user1"ID的<h3>元素
 					   if (user === "1320") {
-					     h3.textContent = "用户："+"超级管理员"+user+"号"; // 如果"user"值为“冷酷的猫猫1320”，将<h3>元素的文本内容设置为“管理员”
+					     h3.textContent = "超级管理员"+user+"号"; // 如果"user"值为“冷酷的猫猫1320”，将<h3>元素的文本内容设置为“管理员”
 					   } else {
 					     h3.textContent = "用户：" + user; // 如果"user"值不为“冷酷的猫猫1320”，将<h3>元素的文本内容设置为“用户：”和"user"值
 					   }
@@ -141,7 +141,7 @@
 			<div id="overlay"></div>
 				<div id="popup" style="text-align: center;">
 					<p style="margin-top: -20px;">公告</p>
-					<p>测试公告，网站制作：冷酷的猫猫1320</p>
+					<p>公告:目前网站维护登录功能暂停使用（注册了也不会保存到json）预计恢复时间：2023/7/5</p>
 					<button style="color: red;background-color: #87CEFA;" onclick="closePopup()">我知道了</button>
 				</div>
 				<script>
@@ -151,12 +151,11 @@
 					}
 				</script>
 				<script>
-					// 以下为自动弹出公告的代码，可根据需要修改
 					window.onload = function() {
 						setTimeout(function() {
 							document.getElementById("popup").style.display = "block";
 							document.getElementById("overlay").style.display = "block";
-						}, 5000); // 5000 毫秒后弹出公告
+						}, 5000); 
 					}
 				</script>
 	</body>
