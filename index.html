@@ -18,6 +18,8 @@
 					padding: 20px;
 					background-color: white;
 					z-index: 9999;
+					border-radius: 10px;
+					padding: 10px;
 				}
 		
 				#overlay {
@@ -40,7 +42,7 @@
 		 h3{font-family:cmdysj}
 		 p{font-family:cmdysj}
 		 button{font-family:cmdysj}
-		 button{background-color: #ffffff}
+		 button{background-color: #ffffff;border-radius: 10px;padding: 10px;}
 		 button:first-child{width: 5%;height: 40px}
 		 #colorbox{background-image: -webkit-linear-gradient(left,rgb(25,255,0),rgb(135,206,250))}
 		 button{border: 0px solid #19ff00}
@@ -60,14 +62,14 @@
 			</p>
 			<div>
 				</div>
-				<div id="colorbox" style="height: 70px;;">
+				<div id="colorbox" style="height: 70px;border-radius: 10px;padding: 10px;">
 					<div style="text-align: center">
 						<button style="width:80px;height: 60px;margin-top: 5px; font-size:120%">主页</button>
 						<a href="https://space.bilibili.com/1644970825?spm_id_from=333.1007.0.0">
 							<button style="width:177px;height: 60px; font-size:120%">前往AT的bilibili</button>
 						</a>
 						<a href="https://lengkumao.lanzoul.com/b041ksl4j">
-							<button style="width:166px;height: 60px; font-size:120%">AT的Phigros谱面</button>
+							<button style="width:170px;height: 60px; font-size:120%">AT的Phigros谱面</button>
 						</a>
 						<a href="https://lengkumao.lanzoul.com/b041lbhkf">
 							<button style="width:120px;height: 60px; font-size:120%">AT的编程</button>
@@ -89,14 +91,18 @@
 						</div>
 						<div>
 							<h2 style="margin-right: 88%;margin-top: -60px;">@冷酷的猫猫1320</h2>
-							<img src="img/bilibili.png" width="50" height="50px" style="margin-right: 1400px;position: relative; top: -60px;">
-							<img src="img/github.png" width="40" height="40px" style="margin-right: 1250px;position: relative; top: -110px;">
+							<a href="https://space.bilibili.com/1644970825">
+								<img src="img/bilibili.png" width="50" height="50px" style="margin-right: 1400px;position: relative; top: -60px;">
+							</a>
+							<a href="https://github.com/lengkudemaomao1320">
+								<img src="img/github.png" width="40" height="40px" style="margin-right: 1250px;position: relative; top: -110px;">
+							</a>
 						</div>
 					</div>
 				</div>
 			<div style="text-align:center">
 				 <h1 style=" font-size:300%">Welcome to the 冷酷的猫猫1320 website</h1>
-				 <img src="img/1320.webp" width="120px" height="120px"/>
+				 <img src="img/1320.webp" width="120px" height="120px" style="border-radius: 50%;"/>
 				 <h2 style=" font-size:200%">这是冷酷的猫猫1320</h2>
 				 <h2 id="box5" align="center"></h2>
 				 <script type="text/javascript" src="js/fangwen.js"></script>
@@ -139,9 +145,9 @@
 		</div>
 			<div id="overlay"></div>
 				<div id="popup" style="text-align: center;">
-					<p style="margin-top: -20px;">公告</p>
+					<p style="margin-top: -10px;">公告</p>
 					<p>公告:目前网站维护登录功能暂停使用（注册了也不会保存到json）预计恢复时间：2023/7/5</p>
-					<button style="color: red;background-color: #87CEFA;" onclick="closePopup()">我知道了</button>
+					<button style="color: red;background-color: #87CEFA;border-radius: 5px;padding: 5px;" onclick="closePopup()">我知道了</button>
 				</div>
 				<script>
 					function closePopup() {
