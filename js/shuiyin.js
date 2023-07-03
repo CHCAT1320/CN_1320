@@ -21,7 +21,6 @@
                 watermark_angle: 25//水印倾斜度数
             };
 
-            //采用配置项替换默认值，作用类似jquery.extend
             if(typeof settings === "object") {
                 var src = settings;
                 for(let key in src) {
@@ -33,19 +32,16 @@
             }
 
             var oTemp = document.createDocumentFragment();
-            // var oTemp = document.createElement("div");
-
-            //获取页面最大宽度
+            //取页面最大宽度
             var page_width = Math.max(document.body.scrollWidth,document.body.clientWidth);
-            //获取页面最大长度
+            //取页面最大长度
             var page_height = Math.max(document.body.scrollHeight,document.body.clientHeight);
 
-            //如果将水印列数设置为0，或水印列数设置过大，超过页面最大宽度，则重新计算水印列数和水印x轴间隔
             if (defaultSettings.watermark_cols == 0 || (parseInt(defaultSettings.watermark_x + defaultSettings.watermark_width *defaultSettings.watermark_cols + defaultSettings.watermark_x_space * (defaultSettings.watermark_cols - 1)) > page_width)) {
                 defaultSettings.watermark_cols = parseInt((page_width-defaultSettings.watermark_x+defaultSettings.watermark_x_space) / (defaultSettings.watermark_width + defaultSettings.watermark_x_space));
                 defaultSettings.watermark_x_space = parseInt((page_width - defaultSettings.watermark_x - defaultSettings.watermark_width * defaultSettings.watermark_cols) / (defaultSettings.watermark_cols - 1));
             }
-            //如果将水印行数设置为0，或水印行数设置过大，超过页面最大长度，则重新计算水印行数和水印y轴间隔
+
             if (defaultSettings.watermark_rows == 0 || (parseInt(defaultSettings.watermark_y + defaultSettings.watermark_height * defaultSettings.watermark_rows + defaultSettings.watermark_y_space * (defaultSettings.watermark_rows - 1)) > page_height)) {
                 defaultSettings.watermark_rows = parseInt((defaultSettings.watermark_y_space + page_height - defaultSettings.watermark_y) / (defaultSettings.watermark_height + defaultSettings.watermark_y_space));
                 defaultSettings.watermark_y_space = parseInt(((page_height - defaultSettings.watermark_y) - defaultSettings.watermark_height * defaultSettings.watermark_rows) / (defaultSettings.watermark_rows - 1));
@@ -60,7 +56,7 @@
                     var mask_div = document.createElement('div');
                     mask_div.id = 'mask_div' + i + j;
                     mask_div.appendChild(document.createTextNode(defaultSettings.watermark_txt));
-                    //设置水印div倾斜显示
+                    //水印div倾斜显示
                     mask_div.style.webkitTransform = "rotate(-" + defaultSettings.watermark_angle + "deg)";
                     mask_div.style.MozTransform = "rotate(-" + defaultSettings.watermark_angle + "deg)";
                     mask_div.style.msTransform = "rotate(-" + defaultSettings.watermark_angle + "deg)";
@@ -68,13 +64,12 @@
                     mask_div.style.transform = "rotate(-" + defaultSettings.watermark_angle + "deg)";
                     mask_div.style.visibility = "";
                     mask_div.style.position = "absolute";
-                    //选不中
+                    //老子不让你选中
                     mask_div.style.left = x + 'px';
                     mask_div.style.top = y + 'px';
                     mask_div.style.overflow = "hidden";
                     mask_div.style.zIndex = "-9999";
                     mask_div.style.pointerEvents = "none";
-                    //mask_div.style.border="solid #eee 1px";
                     mask_div.style.opacity = defaultSettings.watermark_alpha;
                     mask_div.style.fontSize = defaultSettings.watermark_fontsize;
                     mask_div.style.color = defaultSettings.watermark_color;
@@ -85,10 +80,7 @@
                     oTemp.appendChild(mask_div);
                 };
             };
-
-            // document.body.appendChild(oTemp);
             try {
-                // console.log(document.getElementById(id), "document.getElementById(id)");
                 document.getElementById(id).appendChild(oTemp);
             } catch(error) {
                 console.error(error, "？出猫饼了");

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -102,7 +103,7 @@
 				</div>
 			<div style="text-align:center">
 				 <h1 style=" font-size:300%">Welcome to the 冷酷的猫猫1320 website</h1>
-				 <img src="img/1320.webp" width="120px" height="120px" style="border-radius: 50%;"/>
+				 <img src="img/1320.jpeg" width="120px" height="120px" style="border-radius: 50%;"/>
 				 <h2 style=" font-size:200%">这是冷酷的猫猫1320</h2>
 				 <h2 id="box5" align="center"></h2>
 				 <script type="text/javascript" src="js/fangwen.js"></script>
@@ -111,26 +112,7 @@
 					 <h3 style="color: red; font-size:180%">关于我们</h3>
 				 </a>
 			</div>
-				 <script>
-					function GetQueryString(name)
-					{
-					     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-					     var r = window.location.search.substr(1).match(reg);
-					      if(r!=null)return  unescape(r[2]); return "未登录";
-					}
-					 //alert(GetQueryString("user"));
-					 var user = decodeURI(GetQueryString("user")); // 获取URL参数中的"user"值，并进行解码
-					 if (user) {
-					   var h3 = document.getElementById("user1"); // 获取具有"user1"ID的<h3>元素
-					   if (user === "1320") {
-					     h3.textContent = "超级管理员"+user+"号"; // 如果"user"值为“冷酷的猫猫1320”，将<h3>元素的文本内容设置为“管理员”
-					   } else {
-					     h3.textContent = "用户：" + user; // 如果"user"值不为“冷酷的猫猫1320”，将<h3>元素的文本内容设置为“用户：”和"user"值
-					   }
-					 } else {
-					   console.log("无有用户"); // 如果"user"参数为空，将在控制台输出消息
-					 }
-				 </script>
+				 <script src="js/pdcjgly.js"></script>
 				 <script>
 				 	console.log("HE click")
 				 	console.log("Perfect")
