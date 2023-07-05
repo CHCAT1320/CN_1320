@@ -66,25 +66,26 @@
 				<div id="colorbox" style="height: 70px;border-radius: 10px;padding: 10px;">
 					<div style="text-align: center">
 						<button style="width:80px;height: 60px;margin-top: 5px; font-size:120%">主页</button>
-						<a href="https://space.bilibili.com/1644970825?spm_id_from=333.1007.0.0">
+						<!--<a href="https://space.bilibili.com/1644970825?spm_id_from=333.1007.0.0">
 							<button style="width:177px;height: 60px; font-size:120%">前往AT的bilibili</button>
-						</a>
+						</a>-->
+						<button class="btn" onclick="openPopup()" style="font-size: 120%;width:130px;height: 60px">公告</button>
 						<a href="https://lengkumao.lanzoul.com/b041ksl4j">
 							<button style="width:170px;height: 60px; font-size:120%">AT的Phigros谱面</button>
 						</a>
 						<a href="https://lengkumao.lanzoul.com/b041lbhkf">
 							<button style="width:120px;height: 60px; font-size:120%">AT的编程</button>
 						</a>
-						<a href="https://github.com/lengkudemaomao1320">
+						<!--<a href="https://github.com/lengkudemaomao1320">
 							<button style="width:130px;height: 60px; font-size:120%">AT的GitHub</button>
-						</a>
+						</a>-->
 						<a href="https://lengkumao.lanzoul.com/b0426swbe">
 							<button style="width:180px;height: 60px; font-size:120%">自制Phira素材包</button>
 						</a>
 						<a href="404/index.Error.html">	
-							<button style="width:170px;height: 60px; font-size:120%">未开发(预计7.8)</button>
+							<button style="width:170px;height: 60px; font-size:120%">未开发(预计7.10)</button>
 						</a>
-						<a href="Log in/index.Error.html">
+						<a href="./404/index.Error.html">
 							<button style="height: 60px; font-size:120%;">登录</button>
 						</a>
 						<div style="margin-right: -1400px;font-size:120% ;margin-top: -70px;">
@@ -105,10 +106,11 @@
 				 <h1 style=" font-size:300%">Welcome to the 冷酷的猫猫1320 website</h1>
 				 <img src="img/1320.jpeg" width="120px" height="120px" style="border-radius: 50%;"/>
 				 <h2 style=" font-size:200%">这是冷酷的猫猫1320</h2>
-				 <h2 id="box5" align="center"></h2>
+				 
+				 <h2 id="box5" align="center" style="font-size: 200%;"></h2>
 				 <script type="text/javascript" src="js/fangwen.js"></script>
 				 <img src="img/冷酷的猫猫.png" width="400px" height="70px" style="margin-right:-50px">
-				 <a href="https://lengkudemaomao1320.github.io/CN_1320/about/about.html" style="text-decoration: none;">
+				 <a href="about/about.html" style="text-decoration: none;">
 					 <h3 style="color: red; font-size:180%">关于我们</h3>
 				 </a>
 			</div>
@@ -128,7 +130,7 @@
 			<div id="overlay"></div>
 				<div id="popup" style="text-align: center;">
 					<p style="margin-top: -10px;">公告</p>
-					<p>公告:目前网站维护登录功能暂停使用（注册了也不会保存到json）预计恢复时间：2023/7/5</p>
+					<p>公告:目前网站维护,登录功能暂停使用（注册了也不会保存到json）预计恢复时间：2023/7/8</p>
 					<button style="color: red;background-color: #87CEFA;border-radius: 5px;padding: 5px;" onclick="closePopup()">我知道了</button>
 				</div>
 				<script>
@@ -142,8 +144,14 @@
 						setTimeout(function() {
 							document.getElementById("popup").style.display = "block";
 							document.getElementById("overlay").style.display = "block";
-						}, 5000); 
+						}, 0); 
 					}
+				</script>
+				<script>
+					    function openPopup() {
+					      document.getElementById("popup").style.display = "block";
+					      document.getElementById("overlay").style.display = "block";
+					    }
 				</script>
 	</body>
 </html>
