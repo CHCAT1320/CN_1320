@@ -2,34 +2,42 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>登录&注册</title>
-		    <style>
-		
-		    </style>
+		<title>Log in</title>
 	</head>
-	<body style="background-color: #87CEFA;margin: 0;">
-	
-	    <h1>注册</h1>
-	    <form id="registerForm">
-	        <label for="username">用户名：</label>
-	        <input type="text" id="username" name="username" required><br>
-	
-	        <label for="password">密码：</label>
-	        <input type="password" id="password" name="password" required><br>
-	
-	        <input type="submit" value="注册">
-	    </form>
-	
-	    <h1>登录</h1>
-	    <form id="loginForm">
-	        <label for="loginUsername">用户名：</label>
-	        <input type="text" id="loginUsername" name="username" required><br>
-	
-	        <label for="loginPassword">密码：</label>
-	        <input type="password" id="loginPassword" name="password" required><br>
-	
-	        <input type="submit" value="登录">
-	    </form>
-	    <script src="js/dl.js"></script>
+	<style>
+		html{width:100%;overflow-x:hidden;height: 100%;overflow-y: hidden;}
+		@font-face {
+		font-family: "cmdysj";
+		src: url("../fonts/cmdysj.ttf") format("truetype");
+		}
+		 *{font-family:cmdysj}
+	</style>
+	<body style="background-color: #87CEFA;">
+		<div id="body">
+		<div  id="colorbox" style=";background-color: beige;width: 400px;height: 250px;position: absolute;
+            top: 50%;
+            left: 50%;
+			;transform: translate(-50%, -50%);
+			border-radius: 10px;
+			padding: 10px;">
+			<form action="../index.html" method="get">
+		    <h2 style="text-align: center;">Log in</h2>
+			<div id="user" style="display: flex;justify-content: center;">
+				<h4>Account:</h4>
+				<input class="input"type="text" name="user" placeholder="Enter your account" style="height: 15px;margin-top: 23px">
+			</div>
+			<div id="password" style="display: flex;justify-content: center;">
+				<h4>Password:</h4>
+				<input class="input" type="password" name="pd" placeholder="Enter your password" style="height: 15px;margin-top: 23px">
+			</div>
+			<div id="Log in" style="display: flex;justify-content: center;">
+				<input type="submit" value="Log in" style="text-align: center;background-color: #19ff00;border: none;border-radius: 10px;padding: 10px;width:100px;">
+			</div>
+			</form>
+		</div>
+		</div>
+		<div id="watermarkId" class="watermark_mask"></div>
+		<script src="../js/shuiyin.js"></script>
+		<script src="../js/xy suofang.js"></script>
 	</body>
 </html>
