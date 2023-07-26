@@ -48,6 +48,14 @@
 		 button{border: 0px solid #19ff00}
 		 html{width:100%;overflow-x:hidden;height: 100%;overflow-y: hidden;}
 		 a {text-decoration: none;}
+		 #effect {
+		   position: absolute;
+		   width: 100px;
+		   height: 100px;
+		   background-color: transparent;
+		   display: none;
+		   background-size: cover;
+		 }
 	</style>
 	<body style="background-color: #87CEFA;margin: 0;">
 		<div id="body">
@@ -152,5 +160,34 @@
 					      document.getElementById("overlay").style.display = "block";
 					    }
 				</script>
+				<script>
+					document.addEventListener("click", function(event) {
+						event.stopPropagation(); // 阻止事件冒泡
+					  var effect = document.getElementById("effect");
+					  var x = event.clientX - 50; // 调整特效div位置居中
+					  var y = event.clientY - 50;
+					  var imageIndex = 1;
+					  var animationInterval = setInterval(changeImage, 20);
+					  effect.style.left = x + "px";
+					  effect.style.top = y + "px";
+					  effect.style.display = "none";
+					  setTimeout(function() {
+					      effect.style.display = "block"; // 延迟显示特效div
+					      setTimeout(function() {
+					        effect.style.display = "none"; // 延迟隐藏特效div
+					        isAnimating = false; // 动画结束
+					      }, 1000);
+					    }, 100);
+					  function changeImage() {
+					    effect.style.backgroundImage = "url('img/gif/img-" + imageIndex + ".png')";
+					    imageIndex++;
+					    if (imageIndex > 31) {
+					      clearInterval(animationInterval);
+					      effect.style.display = "none";
+					    }
+					  }
+					});
+				</script>
+				<div id="effect"></div>
 	</body>
 </html>
