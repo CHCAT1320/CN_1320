@@ -17,7 +17,7 @@
                 watermark_fontsize: '15px',//水印字体大小
                 watermark_font: 'fonts/cmdysj.ttf',//水印字体
                 watermark_width: 50,//水印宽度
-                watermark_height: 20,//水印长度
+                watermark_height: 40,//水印长度
                 watermark_angle: 25//水印倾斜度数
             };
 
@@ -87,4 +87,4 @@
             }
         };
 
-        watermarkUtils({ watermark_txt: "@冷酷的猫猫1320", watermark_width: 120, watermark_fontsize: "14px" }, watermarkId);
+        watermarkUtils({ watermark_txt: "@CHCAT1320  &  一袋白凉粉", watermark_width: 120, watermark_fontsize: "14px" }, watermarkId);
