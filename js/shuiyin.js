@@ -87,4 +87,4 @@
             }
         };
 
-        watermarkUtils({ watermark_txt: "@CHCAT1320  &  一袋白凉粉", watermark_width: 120, watermark_fontsize: "14px" }, watermarkId);
+        watermarkUtils({ watermark_txt: "@CHCAT1320  &  @一袋白凉粉", watermark_width: 120, watermark_fontsize: "14px" }, watermarkId);
