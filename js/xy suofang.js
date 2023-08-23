@@ -1,5 +1,5 @@
   // body宽高
-  let cw = 1850,ch = 757//1950 757
+  let cw = 1850,ch = 1170//1950 757
   let body = document.getElementById('body')
   body.style.width = `${cw}px`
   body.style.height = `${ch}px`
