@@ -97,6 +97,131 @@
 		 *{
 			 user-select: none;
 		 }
+		 
+		 @keyframes tapxz {
+		 				    0% {
+		 				      transform: rotate(0deg);
+		 				    }
+							100%{
+								transform: rotate(3600deg);
+							}
+		 				  }
+		 				  #tap {
+		 				    animation: tapxz 40s infinite;
+							position: absolute;
+							margin-left: -200px;
+							z-index: 5;
+							background-image: url("img/phi/Tap.png");
+							width: 150px;
+							height: 15px;
+							background-size: 100%
+		 				  }
+		@keyframes dragxz {
+						    0% {
+						      transform: rotate(0deg);
+						    }
+									100%{
+										transform: rotate(3600deg);
+									}
+						  }
+						  #drag {
+						    animation: dragxz 40s infinite;
+									position: absolute;
+									margin-left: -200px;
+									z-index: 5;
+									background-image: url("img/phi/Drag.png");
+									width: 150px;
+									height: 9px;
+									background-size: 100%
+						  }
+		@keyframes flickxz {
+						    0% {
+						      transform: rotate(0deg);
+						    }
+									100%{
+										transform: rotate(3600deg);
+									}
+						  }
+						  #flick {
+						    animation: flickxz 40s infinite;
+									position: absolute;
+									margin-left: -200px;
+									z-index: 5;
+									background-image: url("img/phi/Flick.png");
+									width: 150px;
+									height: 29px;
+									background-size: 100%
+						  }
+						  
+	@keyframes holdxz {
+					    0% {
+					      transform: rotate(0deg);
+					    }
+								100%{
+									transform: rotate(3600deg);
+								}
+					  }
+					  #hold {
+					    animation: holdxz 40s infinite;
+								position: absolute;
+								margin-left: -200px;
+								z-index: 5;
+								background-image: url("img/phi/Hold.png");
+								width: 150px;
+								height: 303px;
+								background-size: 100%
+					  }
+					  
+	.switch {
+	  position: relative;
+	  display: inline-block;
+	  width: 60px;
+	  height: 34px;
+	}
+	
+	.switch input {
+	  opacity: 0;
+	  width: 0;
+	  height: 0;
+	}
+	
+	.slider {
+	  position: absolute;
+	  cursor: pointer;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-color: gray;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+	
+	.slider:before {
+	  position: absolute;
+	  content: "";
+	  height: 26px;
+	  width: 26px;
+	  left: 4px;
+	  bottom: 4px;
+	  background-color: white;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+	
+	input:checked + .slider {
+	  background-color: #2196F3;
+	}
+	
+	input:focus + .slider {
+	  box-shadow: 0 0 1px #2196F3;
+	}
+	
+	input:checked + .slider:before {
+	  -webkit-transform: translateX(26px);
+	  -ms-transform: translateX(26px);
+	  transform: translateX(26px);
+	}
 	</style>
 	<body style=";margin: 0;background-color: rgb(247, 247, 247);">
 		<div id="body">
@@ -156,6 +281,41 @@
 				</div>
 				<h1 style=" font-size:300%" align="center">Welcome to the CHCAT1320 website</h1>
 				<h2 id="box5" align="center" style="font-size: 200%;"></h2>
+				<div style="text-align: center;margin-left: 725px;">
+					<div style="display: flex;">
+						<div style="margin-top: -30px;">
+							<h1>关闭note(BUG修复中)</h1>
+						</div>
+						<label class="switch">
+						  <input type="checkbox" id="toggleSwitch">
+						  <span class="slider"></span>
+						  <script>
+						    const toggleSwitch = document.getElementById('toggleSwitch');
+						    toggleSwitch.addEventListener('change', function() {
+						      if (this.checked) {
+						        var tap = document.getElementById("tap")
+								var drag = document.getElementById("drag")
+								var flick = document.getElementById("flick")
+								var hold = document.getElementById("hold")
+								setInterval(function(){
+									tap.style.display = "none"
+									drag.style.display = "none"
+									flick.style.display = "none"
+									hold.style.display = "none"
+								},1)
+						      } else {
+						        setInterval(function(){
+						        	tap.style.display = "block"
+						        	drag.style.display = "block"
+						        	flick.style.display = "block"
+						        	hold.style.display = "block"
+						        },1)
+						      }
+						    });
+						  </script>
+						</label>
+					</div>
+				</div>
 				<div style="text-align: center;">
 			<div style="text-align:center;background-color: white;width: 500px;margin-left: 5%;height: 650px;margin-top: -425px;border-radius: 50px;padding: 10px;position: absolute;">
 				 <div style="margin-top: 50px;">
@@ -172,7 +332,6 @@
 					 						 <button style="background-color: rgb(158, 119, 235);width: 400px;height: 70px;font-size: 170%;color: white;border-radius: 50px;padding: 0px;">前往发电</button>
 					 					 </a>
 					 </div>
-					 <script type="text/javascript" src="js/run.js"></script>
 				 </div>
 			</div>
 			<div style="text-align:center;background-color: rgba(0, 0, 0,0.5);width: 500px;margin-left: 5%;height: 250px;margin-top: 470px;border-radius: 50px;padding: 10px;"></div>
@@ -190,6 +349,10 @@
 					</a>
 				</div>
 			</div>
+			<!--<div id="tap"></div>
+			<div id="drag"></div>
+			<div id="flick"></div>
+			<div id="hold"></div>-->
 			</div>
 				 <script src="js/pdcjgly.js"></script>
 		</div>
@@ -252,6 +415,7 @@
 					  }
 					});
 				</script>
+									 <script type="text/javascript" src="js/run.js"></script>
 				<div id="effect"></div>
 	</body>
 </html>
