@@ -224,8 +224,51 @@
 	  -ms-transform: translateX(36px);
 	  transform: translateX(36px);
 	}
+	#sensebut{
+				 color: #F7F7F7;
+				 transition: color 0.4s;
+	}
+	#sensebut{
+		background-color:#333;
+		transition: background-color 0.4s;
+	}
+	/* 设置页面的颜色主题 */
+	body {
+	  background-color: #F7F7F7; 
+	  color: #333; 
+	  transition: color 0.4s;
+	}
+	body{
+		background-color: #F7F7F7; 
+		transition: background-color 0.4s;
+	}
+	
+	/* 深色模式样式 */
+	body.openshens {
+	  background-color: #333; /* 深色背景色 */
+	  color: #F7F7F7; /* 深色文字颜色 */
+	}
+	#sensebut.openshens{
+				 color: #333;
+				 background-color:#F7F7F7;
+	}
+	#colorbox.openshens{
+		background-color:black;
+		transition: background-color 0.4s;
+	}
+	button.openshens{
+		background-color: #333; /* 深色背景色 */
+		color: #F7F7F7;
+	}
+	#watermarkId.openshens{
+		color: #F7F7F7;
+	}
+	#githubimg.openshens{
+		background-image: url("img/bilibili..png");
+		
+	}
 	</style>
-	<body style=";margin: 0;background-color: rgb(247, 247, 247);">
+	<body style=";margin: 0;">
 		<div id="body">
 			<p style="display: none;">
 			    0123456789*/+-qwertyuiop
@@ -260,9 +303,8 @@
 						<!--<a href="https://github.com/lengkudemaomao1320">
 							<button style="width:130px;height: 60px; font-size:120%">AT的GitHub</button>
 						</a>-->
-						<a href="https://lengkumao.lanzoul.com/b0426swbe">
-							<button style="width:180px;height: 60px; font-size:120%">自制Phira素材包</button>
-						</a>
+						<button style="width:120px;height: 60px; font-size:120%;
+						" id="sensebut" onclick="openshense()">深色模式</button>
 						<a href="Log in/hello.html">
 							<button style="height: 60px; font-size:120%;">登录</button>
 						</a>
@@ -275,7 +317,7 @@
 								<img src="img/bilibili..png" style="position: absolute;z-index: 1;height: 60px;width: 60px;left: 225px;top: 15px;">
 							</a>
 							<a href="https://github.com/CHCAT1320">
-								<img src="img/github.png" style="position: absolute;z-index: 1;height: 60px;width: 60px;left: 315px;top: 15px;">
+								<img  id="githubimg"src="img/github.png" style="position: absolute;z-index: 1;height: 60px;width: 60px;left: 315px;top: 15px;">
 							</a>
 						</div>
 					</div>
@@ -337,8 +379,8 @@
 			<div style="text-align:center;background-color: white;width: 500px;margin-left: 5%;height: 650px;margin-top: -425px;border-radius: 50px;padding: 10px;position: absolute;">
 				 <div style="margin-top: 50px;">
 					 <img src="img/1320.png" width="170px" height="170px" style="border-radius: 50%;"/>
-					 <h2 style=" font-size:200%">CHCAT1320</h2>
-					 <h2>初中牲，没钱，需要爱发电支持</h2>
+					 <h2 style=" font-size:200%;color: black;">CHCAT1320</h2>
+					 <h2 style="color: black;">初中生</h2>
 					 <div>
 					 					 <a href="https://space.bilibili.com/1644970825">
 					 						 <button style="background-color: rgb(50, 155, 230);width: 400px;height: 70px;font-size: 170%;color: white;border-radius: 50px;padding: 0px;">关注我</button>
@@ -359,7 +401,7 @@
 			<div style="text-align: center;margin-top: 20px;"></div>
 			</div>
 			<div style="text-align: center;">
-				<img src="img/冷酷的猫猫.png" width="400px" height="70px">
+				<img src="img/冷酷的猫猫.png" width="400px" height="70px" style="margin-left: -30px;">
 				<div style="width: 150px;margin-left: 45%;margin-top: -30px;">
 					<a href="about/about.html" style="text-decoration: none;">
 						<h3 style="color: red; font-size:180%">关于我们</h3>
@@ -431,6 +473,23 @@
 					    }
 					  }
 					});
+				</script>
+				<script>
+					// 切换深色模式
+					function openshense() {
+					  var body = document.body;
+					  body.classList.toggle("openshens");
+					  var shensebut = document.getElementById("sensebut");
+					  shensebut.classList.toggle("openshens");
+					  var colorbox = document.getElementById("colorbox");
+					  colorbox.classList.toggle("openshens");
+					  var button = document.button;
+					  button.classList.toggle("openshens");
+					  var watermarkId = document.getElementById("watermarkId")
+					  watermarkId.classList.toggle("openshens");
+					  var githubimg = document.getElementById("githubimg")
+					  githubimg.classList.toggle("openshens");
+					}
 				</script>
 									 <script type="text/javascript" src="js/run.js"></script>
 				<div id="effect"></div>

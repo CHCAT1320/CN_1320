@@ -133,4 +133,25 @@ function createHold() {
 }
 
 setInterval(createHold, Math.floor(Math.random() * 9000) + 1000);
-
+setInterval(function(){
+	if (tap.length > 4) {
+	    for (var i = 0; i < tap.length; i++) {
+	        tap[i].remove();
+	    }
+	}
+	if (drag.length > 4) {
+	    for (var d = 0; d < drag.length; d++) {
+	        drag[d].remove();
+	    }
+	}
+	if (flick.length > 4) {
+	    for (var f = 0; f < flick.length; f++) {
+	        flick[f].remove();
+	    }
+	}
+	if (hold.length > 4) {
+	    for (var h = 0; h < hold.length; h++) {
+	        hold[h].remove();
+	    }
+	}
+},10)
