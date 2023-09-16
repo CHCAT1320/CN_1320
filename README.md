@@ -7,7 +7,7 @@
 
 放在Github只是为了网页托管。
 ## 近日更新
-Version 20230916(`v1.0.5`)
+Pre-release version 20230916(`v1.0.5`)
 1. note动画
     
 	在以前的预发布版本中的BUG已修复：
