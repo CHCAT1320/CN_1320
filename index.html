@@ -292,18 +292,19 @@
 	    height: 200px;
 		position: absolute;
 		background-color: white;
-		top: 50%;
-		left: 50%;
+		top: 17%;
+		left: 17%;
 		transform: translate(-50%, -50%);
 		z-index: 9999;
 		text-align: center;
 		font-size: 200%;
+		border-radius: 50%;
 		}
 	</style>
 	<body style=";margin: 0;">
 		<div id="body">
 			<div id="loading-bar">
-				<div id="circle"><h1>加载中</h1></div>
+				<div id="circle"><h1 style="margin-top: 50px;">加载中</h1></div>
 			</div>
 			<script>
 			    // 获取加载条元素
@@ -485,8 +486,8 @@
 		<div>
 			<script src="js/xy suofang.js"></script>
 		</div>
-			<div id="overlay"></div>
-				<div id="popup" style="text-align: center;">
+			<div id="overlay" style="display: none;"></div>
+				<div id="popup" style="text-align: center;display: none;">
 					<p style="margin-top: -10px;">公告板</p>
 					<p>该网站现在为测试版，可能会出现不可避免的BUG</p>
 					<button style="color: red;background-color: #87CEFA;border-radius: 5px;padding: 5px;" onclick="closePopup()">我知道了</button>
