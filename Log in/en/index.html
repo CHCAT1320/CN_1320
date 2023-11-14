@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Log in</title>
+		<link rel="icon" href="../favicon.ico">
+	</head>
+	<style>
+		html{width:100%;overflow-x:hidden;height: 100%;overflow-y: hidden;}
+		@font-face {
+		font-family: "cmdysj";
+		src: url("../fonts/cmdysj.ttf") format("truetype");
+		}
+		 *{font-family:cmdysj}
+		 a{
+			 text-decoration: none;
+		 }
+	</style>
+	<body style="background-color: #87CEFA;">
+		<div id="body">
+		<div  id="colorbox" style=";background-color: beige;width: 400px;height: 250px;position: absolute;
+            top: 50%;
+            left: 50%;
+			;transform: translate(-50%, -50%);
+			border-radius: 10px;
+			padding: 10px;">
+			<form action="../../index.html" method="get">
+		    <h2 style="text-align: center;">Log in</h2>
+			<div style="display: flex;">
+				<h4 style="margin-top: -3px;">Language:</h4>
+				<a href="../zh-cn/index.html">
+					<button type="button" style="display: flex;cursor: pointer;text-align: center;background-color: #19ff00;border: none;border-radius: 10px;padding: 10px;width:65px;height:20px">
+						<div  style="display: flex;margin-top: -30px;">
+							<h4 style="color:red;">EN</h4>
+							<h6>/</h6>
+							<h6>CN</h6>
+						</div>
+					</button>
+				</a>
+			</div>
+			<div style="margin-top: -30px;">
+				<div id="user" style="display: flex;justify-content: center;">
+					<h4>Account:</h4>
+					<input class="input"type="text" name="user" placeholder="Enter your account" style="height: 15px;margin-top: 23px">
+				</div>
+				<div id="password" style="display: flex;justify-content: center;">
+					<h4>Password:</h4>
+					<input class="input" type="password" name="pd" placeholder="Enter your password" style="height: 15px;margin-top: 23px">
+				</div>
+				<div id="Log in" style="display: flex;justify-content: center;">
+					<input type="submit" value="Log in" style="cursor: pointer;text-align: center;background-color: #19ff00;border: none;border-radius: 10px;padding: 10px;width:100px;">
+				</div>
+			</div>
+			</form>
+		</div>
+		</div>
+		<script src="xy suofang.js"></script>
+		<div id="watermarkId" class="watermark_mask"></div>
+		<script src="../js/shuiyin.js"></script>
+	</body>
+</html>
