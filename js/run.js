@@ -10,6 +10,35 @@ function setStorage(){
             var oBox=document.getElementById('box5');
             oBox.innerHTML="你已经访问了此网站"+counter+"次";
 			
+			    // 获取加载条元素
+			    var loadingBar = document.getElementById('loading-bar');
+			    // 获取页面中所有图片元素
+			    var images = document.getElementsByTagName('img');
+			    // 记录图片加载完成的数量
+			    var loadedCount = 0;
+			    // 监听图片加载完成事件
+			    for (var i = 0; i < images.length; i++) {
+			        images[i].addEventListener('load', function() {
+			            // 图片加载完成，计数加1
+			            loadedCount++;
+			            // 判断是否所有图片加载完成
+			            if (loadedCount === images.length) {
+			                // 所有图片加载完成，隐藏加载条
+			                loadingBar.style.display = 'none';
+			            }
+			        });
+			    }
+			    // 监听页面加载完成事件
+			    window.addEventListener('load', function() {
+			        // 隐藏加载条
+			        loadingBar.style.display = 'none';
+			    });
+			    // 监听DOM内容加载完成事件（不包括图片等资源）
+			    document.addEventListener('DOMContentLoaded', function() {
+			        // 显示加载条
+			        loadingBar.style.display = 'block';
+			    });
+
 function createTap() {
   var tap = document.createElement("div");
   tap.setAttribute("id", "tap");
@@ -155,3 +184,87 @@ setInterval(function(){
 	    }
 	}
 },10)
+
+							  var deleteInterval;
+							  var deleteFlag = false;
+							  
+							  function toggleDelete() {
+							      if (!deleteFlag) {
+							          deleteFlag = true;
+							          deleteInterval = setInterval(function() {
+							              var tapDivs = document.querySelectorAll("#tap");
+										  var dragDivs = document.querySelectorAll("#drag");
+										  var flickDivs = document.querySelectorAll("#flick");
+										  var holdDivs = document.querySelectorAll("#hold");
+							              if (tapDivs.length > 0) {
+							                  for (var i = 0; i < tapDivs.length; i++) {
+							                      tapDivs[i].remove();
+							                  }
+							              }
+										  if (dragDivs.length > 0) {
+										      for (var i = 0; i < dragDivs.length; i++) {
+										          dragDivs[i].remove();
+										      }
+										  }
+										  if (flickDivs.length > 0) {
+										      for (var i = 0; i < flickDivs.length; i++) {
+										          flickDivs[i].remove();
+										      }
+										  }
+										  if (holdDivs.length > 0) {
+										      for (var i = 0; i < holdDivs.length; i++) {
+										          holdDivs[i].remove();
+										      }
+										  }
+							          }, 10);
+							      } else {
+							          clearInterval(deleteInterval);
+							          deleteFlag = false;
+							      }
+							  }
+
+
+					// 切换深色模式
+					function openshense() {
+					  var body = document.body;
+					  body.classList.toggle("openshens");
+					  var shensebut = document.getElementById("sensebut");
+					  shensebut.classList.toggle("openshens");
+					  var colorbox = document.getElementById("colorbox");
+					  colorbox.classList.toggle("openshens");
+					  var button = document.button;
+					  button.classList.toggle("openshens");
+					  var watermarkId = document.getElementById("watermarkId")
+					  watermarkId.classList.toggle("openshens");
+					  var githubimg = document.getElementById("githubimg")
+					  githubimg.classList.toggle("openshens");
+					}
+					
+					
+					
+					document.addEventListener("click", function(event) {
+						event.stopPropagation(); // 阻止事件冒泡
+					  var effect = document.getElementById("effect");
+					  var x = event.clientX - 50; // 调整特效div位置居中
+					  var y = event.clientY - 50;
+					  var imageIndex = 1;
+					  var animationInterval = setInterval(changeImage, 20);
+					  effect.style.left = x + "px";
+					  effect.style.top = y + "px";
+					  effect.style.display = "none";
+					  setTimeout(function() {
+					      effect.style.display = "block"; // 延迟显示特效div
+					      setTimeout(function() {
+					        effect.style.display = "none"; // 延迟隐藏特效div
+					        isAnimating = false; // 动画结束
+					      }, 1000);
+					    }, 100);
+					  function changeImage() {
+					    effect.style.backgroundImage = "url('img/gif/img-" + imageIndex + ".png')";
+					    imageIndex++;
+					    if (imageIndex > 31) {
+					      clearInterval(animationInterval);
+					      effect.style.display = "none";
+					    }
+					  }
+					});

@@ -19,3 +19,12 @@
   windowResize()
   // 监听窗口尺寸变化
   window.addEventListener('resize', windowResize);
+  
+  function ok(){
+	  document.getElementById("popo").style.display = "block";
+	  document.getElementById("shelter").style.display = "block";
+  }
+  function closepopo(){
+	  document.getElementById("popo").style.display = "none";
+	  document.getElementById("shelter").style.display = "none";
+  }

@@ -1,5 +1,5 @@
   // body宽高
-  let cw = 300,ch = 400
+  let cw = 320,ch = 420
   let body = document.getElementById('body')
   body.style.width = `${cw}px`
   body.style.height = `${ch}px`
@@ -19,3 +19,5 @@
   windowResize()
   // 监听窗口尺寸变化
   window.addEventListener('resize', windowResize);
+  
+ 
