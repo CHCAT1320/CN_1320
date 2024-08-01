@@ -1,47 +1,28 @@
-// // body宽高
-// let cw = 800, ch = 500;
-// let body = document.getElementById('body');
-// body.style.width = `${cw}px`;
-// body.style.height = `${ch}px`;
+// body宽高
+let cw = 1150, ch = 670;
+let body = document.getElementById('body');
+body.style.width = `${cw}px`;
+body.style.height = `${ch}px`;
 
-// // body缩放
-// function windowResize() {
-//   // 窗口宽高
-//   let w = window.innerWidth, h = window.innerHeight;
-//   // 缩放比例
-//   let r = w / cw < h / ch ? w / cw : h / ch;
-//   body.style.transform = `scale(${r})`;
-//   body.style.marginLeft = (-(cw - r * cw) / 2 + (w - r * cw) / 2) + 'px';
-//   body.style.marginTop = (-(ch - r * ch) / 2 + (h - r * ch) / 2) + 'px';
-//   body.style.marginBottom = (-(h > ch ? h : ch - r * ch)) + 'px';
-//   body.style.marginRight = (-(w > cw ? w : cw - r * cw)) + 'px';
-// }
-// windowResize();
-// // 监听窗口尺寸变化
-// window.addEventListener('resize', windowResize);
-
-//反色模式开关
-let toggle = document.querySelector("#switch");
-toggle.addEventListener("click",() => {
-    document.documentElement.classList.toggle("dark-mode");
-    document.querySelectorAll(".inverted").forEach((res) => {
-        res.classList.toggle("invert");
-    })
-});
-// 访问次数
-function setStorage(){
-    if(localStorage.counter){
-        localStorage.counter=Number(localStorage.counter)+1;
-    }else{
-        localStorage.counter=1;
-    }
-    return localStorage.counter;
+// body缩放
+function windowResize() {
+  // 窗口宽高
+  let w = window.innerWidth, h = window.innerHeight;
+  // 缩放比例
+  let r = w / cw < h / ch ? w / cw : h / ch;
+  body.style.transform = `scale(${r})`;
+  body.style.marginLeft = (-(cw - r * cw) / 2 + (w - r * cw) / 2) + 'px';
+  body.style.marginTop = (-(ch - r * ch) / 2 + (h - r * ch) / 2) + 'px';
+  body.style.marginBottom = (-(h > ch ? h : ch - r * ch)) + 'px';
+  body.style.marginRight = (-(w > cw ? w : cw - r * cw)) + 'px';
 }
-var counter=setStorage();
-var oBox=document.getElementById('box5');
-oBox.innerHTML="你已经访问了此网站"+counter+"次";
+windowResize();
+// 监听窗口尺寸变化
+window.addEventListener('resize', windowResize);
 
-// 水印
+
+
+
 const watermarkId = "watermarkId";
 
 // 水印遮罩函数
@@ -131,3 +112,9 @@ function watermarkUtils(settings, id) {
 };
 
 watermarkUtils({ watermark_txt: "@CHCAT1320", watermark_width: 120, watermark_fontsize: "14px" }, watermarkId);
+
+
+
+function search(){
+    alert(`此功能还未开发`);
+}

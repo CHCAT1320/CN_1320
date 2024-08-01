@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+<style>
+    body {
+        margin: 0px;
+        background-color: #dbdbdb;
+    }
+    #Navigation-bar {
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        animation: size 0.5s;
+    }
+    #Logo {
+        width: 270px;
+        position: absolute;
+        left: 0;
+        top: 9px;
+    }
+    a {
+        text-decoration: none;
+    }
+    ul {
+        list-style: none;
+    }
+    #title:hover {
+        transform: translateY(-5px);
+    }
+    #title {
+        position: relative;
+        transition: transform 0.3s ease
+    }
+    #shadow-Navigation-bar {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 10px;
+        position: absolute;
+        margin-top: 55px;
+        z-index: -99;
+        animation: size 0.5s;
+    }
+    #Introduction-edition {
+        background-color: white;
+        text-align: center;
+        position: absolute;
+        width: 300px;
+        height: 400px;
+        top: 150px;
+        border-radius: 10%;
+        left: 100px;
+        transform-style: preserve-3d;
+        animation: size 0.5s;
+        transition: transform 0.3s ease;
+    }
+    @keyframes size {
+        0% {
+            transform:scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    #Introduction-edition:hover {
+        transform: perspective(800px) rotateY(10deg) ;
+        backface-visibility: hidden; 
+    }
+    #search-button {
+        background-color: white;
+        border: 0;
+        margin-top: 0px;
+        margin-left: 615%;
+        border-radius: 20%;
+        height: 26px;
+        cursor: pointer;
+    }
+    #search-button:hover {
+        background-color: rgb(211, 210, 202);
+    }
+    #bilibili {
+        width: 550px;
+        height: 400px;
+        background-color: white;
+        text-align: center;
+        position: absolute;
+        top: 150px;
+        left: 500px;
+        border-radius: 10%;
+        transform-style: preserve-3d;
+        animation: size 0.5s;
+        transition: transform 0.3s ease;
+    }
+    #bilibili:hover {
+        transform: perspective(800px) rotateY(-10deg) ;
+        backface-visibility: hidden; 
+    }
+    @font-face {
+		
+		font-family: "cmdysj";
+		src: url("fonts/cmdysj.ttf") format("truetype");
+		}
+    * {
+        font-family:cmdysj
+    }
+</style>
+<body id="body">
+    <div>
+        <div id="Navigation-bar">
+            <img src="img/Logo.png" id="Logo">
+            <div style="margin-top: -17px;">
+                <div style="margin-left: 250px;" id="title">
+                    <ul>
+                        <li>
+                            <a href="" style="position: absolute;">
+                                <h4 style="color: black;">首页</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="margin-left: 300px;position: absolute;" id="title" onclick="Announcement.show()">
+                    <ul>
+                        <li>
+                            <h4 style="color: black;cursor: pointer;">公告</h4>
+                        </li>
+                    </ul>
+                </div>
+                <div style="margin-left: 350px;" id="title">
+                    <ul>
+                        <li>
+                            <a href="" style="position: absolute;">
+                                <h4 style="color: black;">工具箱</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="margin-left: 415px;" id="title">
+                    <ul>
+                        <li>
+                            <a href="" style="position: absolute;">
+                                <h4 style="color: black;">小游戏</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="margin-left: 475px;" id="title">
+                    <ul>
+                        <li>
+                            <a href="" style="position: absolute;">
+                                <h4 style="color: black;">关于我们</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="position: absolute;margin-left: 625px;margin-top: 20px;">
+                    <div style="position: absolute;">
+                        <input type="text" style="width: 200px;height: 25px;position: absolute;margin-top: -2px;">
+                        <div style="position: absolute;">
+                            <button id="search-button" onclick="search()">
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.3451 15.2003C16.6377 15.4915 16.4752 15.772 16.1934 16.0632C16.15 16.1279 16.0958 16.1818 16.0525 16.2249C15.7707 16.473 15.4456 16.624 15.1854 16.3652L11.6848 12.8815C10.4709 13.8198 8.97529 14.3267 7.44714 14.3267C3.62134 14.3267 0.5 11.2314 0.5 7.41337C0.5 3.60616 3.6105 0.5 7.44714 0.5C11.2729 0.5 14.3943 3.59538 14.3943 7.41337C14.3943 8.98802 13.8524 10.5087 12.8661 11.7383L16.3451 15.2003ZM2.13647 7.4026C2.13647 10.3146 4.52083 12.6766 7.43624 12.6766C10.3517 12.6766 12.736 10.3146 12.736 7.4026C12.736 4.49058 10.3517 2.1286 7.43624 2.1286C4.50999 2.1286 2.13647 4.50136 2.13647 7.4026Z" fill="currentColor"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="shadow-Navigation-bar"></div>
+        </div>
+        <dialog id="Announcement" style="z-index: 9999;">
+            <div>
+                <p>公告板</p>
+                <h5>祝贺网站改版成功</h5>
+                <button onclick="Announcement.close()">我知道了</button>
+            </div>
+        </dialog>
+        <div>
+            <div id="Introduction-edition">
+                <img src="img/1320.jpg" style="width: 100px;height: 100px;border-radius: 50%;margin-top: 35px;">
+                <h4>CHCAT1320</h4>
+                <h4>初中生</h4>
+                <a href="https://space.bilibili.com/1644970825">
+                    <button style="background-color: rgb(50, 155, 230);width: 200px;height: 40px;font-size: 120%;color: white;border-radius: 50px;padding: 0px;border: 0;margin-top: 0px;cursor: pointer;">关注我</button>
+                </a>
+                <a href="https://afdian.net/a/CN_1320">
+                    <button style="background-color: rgb(158, 119, 235);width: 200px;height: 40px;font-size: 120%;color: white;border-radius: 50px;padding: 0px;border: 0;margin-top: 15px;cursor: pointer;">前往发电</button>
+                </a>
+            </div>
+            <div id="bilibili">
+                <iframe src="https://player.bilibili.com/player.html?aid=574172596&bvid=BV1Kz4y1s7So&cid=1218351352&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="500" height="340" style="margin-top: 30px;"> </iframe>
+            </div>
+        </div>
+    </div>
+    <div id="watermarkId"></div>
+    <script src="js/run.js"></script>
+</body>
+</html>
