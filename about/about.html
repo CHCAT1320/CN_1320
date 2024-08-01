@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>The CHCAT1320's home is about</title>
+    <link rel="icon" href="../img/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+</head>
+
+<style>
+@font-face {
+
+font-family: "cmdysj";
+
+src: url("../fonts/cmdysj.ttf") format("truetype");
+
+
+}
+ div1{font-family:cmdysj}
+ div{font-family:cmdysj}
+ h1{font-family:cmdysj}
+ h2{font-family:cmdysj}
+ h3{font-family:cmdysj}
+a {text-decoration: none;}
+body{
+	overflow: hidden;
+}
+			#popo{
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				border: 1px solid black;
+				padding: 20px;
+				background-color: white;
+				z-index: 9999;
+				border-radius: 10px;
+				padding: 10px;
+				height: 500px;
+				width: 370px;
+				display: none;
+			}
+			#shelter {
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-color: rgba(0,0,0,0.5);
+				z-index: 9998;
+				display: none;
+			}
+</style>
+
+<body id="body">
+<p style="display:none">
+    0123456789*/+-qwertyuiop
+    asdfghjkl
+    zxcvbnm
+    []\;',./{}|:">?<
+    !@#$%^&*()_+
+    QWERTYUIOP
+    ASDFGHJKL
+    ZXCVBNM
+</p>
+
+<div style="text-align:center">
+    <h2>
+        这里是About关于
+    </h2>
+    <a href="../index.html">
+    <button>返回主页</button>
+    </a>
+
+		<button onclick="ok()">感谢名单</button>
+
+	<a href="https://afdian.net/a/CN_1320">
+		<button title="前往爱发电立即添加感谢名单">什么？你还没有发电？</button>
+	</a>
+	
+<a href="https://space.bilibili.com/1644970825">
+    <h3 style="color: red">作者：@CHCAT1320</h3>
+</a>
+<!--不规范的写法，不要学-->
+<h3>网站的部分代码由 @CHCAT1320 独立编写</h3>
+<h3>特别感谢 @一袋白凉粉啊 @CTBBBB6090 对CHCAT的技术帮助与支持</h3>
+<h3>如果发现BUG或有什么想写进网站的东西，请向QQ:1095216448提交</h3>
+<h3>或1095216448@qq.com</h3>
+<h3>如有侵权请速速与我联系删除！</h3>
+<h3 style="color: red;">第一次更新：2023年2月13日10点26分26秒</h3>
+<h3 style="color: red">最后一次更新：2023年10月4日</h3>
+<h3 style="color: blue">版本号：v1.0.7</h3>
+    <h3 style="margin-top: 0;margin-right:65px;color: blue">共修复了</h3>
+    <h3 style="margin-top: -45px;margin-right:-20px;color: red" title="我也不知道多少个,反正很多">?</h3>
+    <h3 style="margin-top: -47px;margin-right:-90px;color: blue">个问题</h3>
+
+
+    <img src="../img/1320.jpg" width="50px" height="50px">
+
+<h3>UP永远在这里</h3>
+<h4>喵!</h4>
+
+<img src="../img/冷酷的猫猫.png" width="400px" height="70px">
+</div>
+
+<div id="shelter">
+	<div id="popo">
+		<iframe src="../thank you/Thank you list.html" frameborder="0" style="height: 500px;width: 370px;"></iframe>
+	    <button style="width: 100px;height: 50px;margin-left: 135px;" onclick="closepopo()">关闭</button>
+	</div>
+</div>
+
+<div id="watermarkId" class="watermark_mask" style="z-index:1"></div>
+   
+<script src="../js/shuiyin.js" type="text/javascript" charset="utf-8"></script>
+<script src="run.js"></script>
+</body>
+</html>
